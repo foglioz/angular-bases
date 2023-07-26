@@ -9,8 +9,8 @@ import { CharacterComponent } from './components/character/character.component';
 
 
 @NgModule({
-  exports:[MainPageComponent],
   declarations: [MainPageComponent, ListComponent, CharacterComponent],
+  exports:[MainPageComponent],
   imports: [
     CommonModule,FormsModule
   ]

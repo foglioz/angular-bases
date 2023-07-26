@@ -9,14 +9,14 @@ import { Character } from '../../interfaces/character.interface';
 export class CharacterComponent {
 
   @Output()
-onNewCharacter : EventEmitter<Character>=new EventEmitter();
+public onNewCharacter : EventEmitter<Character>=new EventEmitter();
 
   public character: Character={
     name:'',
     power: 0
   };
-  public emitirCharacter(){
-    if (this.onNewCharacter.name.length===0) return;
+  public emitirCharacter():void{
+    if (this.character.name.length===0) return;
 
     this.onNewCharacter.emit(this.character);
     console.log(this.character);
